@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TabViewCustomApp: App {
+    @StateObject var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }
